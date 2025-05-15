@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>HOMEPAGE</h1>
+    <h1 class="h1">HOMEPAGE</h1>
     <?php
 
     $credentials = array("Name" => "Blair", "Age" => "18 years", "PhoneNumber" => "078453625");
