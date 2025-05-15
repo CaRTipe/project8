@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -30,7 +30,7 @@
     ?>
 
     <h1 class="h2"><b>Example 1</b></h1>
-    <table class="table mb-3">
+    <table class="table table-danger table-striped-columns">
         <tr>
             <th>Bicycles</th>
             <th>Cars</th>
