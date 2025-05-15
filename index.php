@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <h1 class="h1">HOMEPAGE</h1>
+    <h1 class="h1"><b>
+            HOMEPAGE
+        </b></h1>
     <?php
 
-    $credentials = array("Name" => "Blair", "Age" => "18 years", "PhoneNumber" => "078453625");
-    krsort($credentials);
 
 
     $vehicles = array(
@@ -28,15 +28,8 @@
 
 
     ?>
-    <ol>
-        <?php
-        foreach ($credentials as $x => $value) {
-            echo "<li>" . $x . ":  " . $value  .  "</li>";
-        }
-        #loop
-        ?>
-    </ol>
 
+    <h1 class="h2"><b>Example 1</b></h1>
     <table class="table mb-3">
         <tr>
             <th>Bicycles</th>
@@ -87,6 +80,7 @@
         </tr>
     </table>
     <div id="container">
+        <h1 class="h3"><b>SAFARICOM</b></h1>
         <div style="display: flex; flex-direction: row; align-items: center; margin-top: 5px;">
             <label for="option" class="form-label">Choose Number 1-5</label>
             <input type="number" id="option" class="form-control-sm px-0 mx-3">
