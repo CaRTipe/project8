@@ -13,17 +13,20 @@ function showSwitch() {
       const label = document.createElement("label");
       label.htmlFor = "datadeal";
       label.textContent = "Options for Data deals";
+      label.className = "form-label"
       document.getElementById("inside1").appendChild(label);
 
       const input = document.createElement("input");
       input.type = "number";
       input.id = "datadeal";
+      input.className = "form-control-sm px-0 mx-3"
       document.getElementById("inside1").appendChild(input);
 
       const button = document.createElement("button");
       button.id = "data";
       button.textContent = "Data deals";
       button.onclick = () => showData();
+      button.className = "btn btn-secondary"
       document.getElementById("inside1").appendChild(button);
       break;
     case 2:
@@ -31,17 +34,20 @@ function showSwitch() {
       const label2 = document.createElement("label");
       label2.htmlFor = "ofa";
       label2.textContent = "Options for OFA YA MTAA";
+      label2.className = "form-label"
       document.getElementById("inside2").appendChild(label2);
 
       const input2 = document.createElement("input");
       input2.type = "number";
       input2.id = "ofa";
+      input2.className = "form-control-sm px-0 mx-3"
       document.getElementById("inside2").appendChild(input2);
 
       const button2 = document.createElement("button");
       button2.id = "buttonofa";
       button2.textContent = "OFA YA MTAA";
       button2.onclick = () => showOfa();
+      button2.className = "btn btn-secondary"
       document.getElementById("inside2").appendChild(button2);
 
       break;

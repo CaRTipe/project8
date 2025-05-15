@@ -37,7 +37,7 @@
         ?>
     </ol>
 
-    <table>
+    <table class="table mb-3">
         <tr>
             <th>Bicycles</th>
             <th>Cars</th>
@@ -87,15 +87,15 @@
         </tr>
     </table>
     <div id="container">
-        <div style="display: flex; flex-direction: row;">
-            <label for="option">Choose Number 1-5</label>
-            <input type="number" id="option">
-            <button id="button" onclick="showSwitch()">544 Code</button>
+        <div style="display: flex; flex-direction: row; align-items: center; margin-top: 5px;">
+            <label for="option" class="form-label">Choose Number 1-5</label>
+            <input type="number" id="option" class="form-control-sm px-0 mx-3">
+            <button class="btn btn-secondary" id="button" onclick="showSwitch()">544 Code</button>
         </div>
-        <div id="inside1">
+        <div id="inside1" style="display: flex; flex-direction: row; align-items: center; margin-top: 5px;">
 
         </div>
-        <div id="inside2">
+        <div id="inside2" style="display: flex; flex-direction: row; align-items: center; margin-top: 5px;">
 
         </div>
     </div>
