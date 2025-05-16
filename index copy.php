@@ -1,24 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+$data = [
+    ['Apple', 'Banana', 'Cherry'],
+    ['Dog', 'Elephant', 'Fox'],
+    ['Green', 'House', 'Island']
+];
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doc</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-</head>
-
-<body>
-    <div class="d-flex flex-column mb-4">
-        <form>
-            <label for="email">Email: </label>
-            <input type="email" id="email" class="form-control">
-            <label for="password">Password: </label>
-            <input type="password" id="password" class="form-control mb-3">
-
-            <button class="btn btn-secondary">Submit</button>
-        </form>
-    </div>
-</body>
-
-</html>
+echo "<table border='1'>";
+foreach ($data as $row) {
+    echo "<tr>";
+    foreach ($row as $index => $cell) {
+        if ($index === 2) {
+            // Targeting the 3rd column (index 2)
+            echo "<td style='background-color: yellow;'>$cell</td>";
+        } else {
+            echo "<td>$cell</td>";
+        }
+    }
+    echo "</tr>";
+}
+echo "</table>";
+?>

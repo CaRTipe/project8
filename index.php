@@ -26,6 +26,14 @@
     );
 
 
+    $people = array(
+        array("Angel Mika", "John Doe", "Mary Doe", "James Charles"),
+        array("19", "20", "40", "19"),
+        array("0712321453", "0723142563", "0796574372", "0765435251", "0745321213"),
+        array("Nairobi", "Nakuru", "Eldoret", "Narok")
+    );
+
+
 
     ?>
 
@@ -107,6 +115,55 @@
 
         </p>
     </div>
+
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Phone Number</th>
+            <th>Place</th>
+        </tr>
+        <tr>
+            <?php
+            foreach ($people as $person) {
+                foreach ($person as $key => $value) {
+                    if ($key == 0)
+                        echo "<td>" . $value . "</td>";
+                }
+            }
+            ?>
+        </tr>
+        <tr>
+            <?php
+            foreach ($people as $person) {
+                foreach ($person as $key => $value) {
+                    if ($key == 1)
+                        echo "<td>" . $value . "</td>";
+                }
+            }
+            ?>
+        </tr>
+        <tr>
+            <?php
+            foreach ($people as $person) {
+                foreach($person as $key => $value) {
+                    if ($key==2)
+                    echo "<td>" . $value . "</td>";
+                }
+            }
+            ?>
+        </tr>
+        <tr>
+            <?php
+            foreach($people as $person) {
+                foreach($person as $key=>$value) {
+                    if ($key == 3)
+                    echo "<td>" . $value . "</td>";
+                }
+            }
+            ?>
+        </tr>
+    </table>
 
 
 
