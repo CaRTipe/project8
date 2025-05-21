@@ -26,12 +26,15 @@
     );
 
 
-    $people = array(
-        array("Angel Mika", "John Doe", "Mary Doe", "James Charles"),
-        array("19", "20", "40", "19"),
-        array("0712321453", "0723142563", "0796574372", "0765435251", "0745321213"),
-        array("Nairobi", "Nakuru", "Eldoret", "Narok")
-    );
+    // $people = array(
+    //     array("Angel Mika", "19", ["0712321453"], ["Nairobi"]),
+    //     array("John Doe", "20", ['0754567432'], ['Nakuru', 'Kisii']),
+    //     array("Mary Doe", "32", ['0798543231', '0745676942'],  ["Kisumu"]),
+    //     array("James Charles", "41", ['0786594321'], ["Eldoret"]),
+    //     array("James Charles", "41", ['0786594321'], ["Eldoret"])
+
+    // );
+    include "people_array.php";
 
 
 
@@ -118,51 +121,34 @@
 
     <table class="table">
         <tr>
+            <th>#</th>
             <th>Name</th>
             <th>Age</th>
             <th>Phone Number</th>
             <th>Place</th>
         </tr>
-        <tr>
-            <?php
-            foreach ($people as $person) {
-                foreach ($person as $key => $value) {
-                    if ($key == 0)
-                        echo "<td>" . $value . "</td>";
+        <?php
+        foreach ($people as $key=>$person) {
+            echo "<tr>";
+            echo "<td>" . $key . "</td>";
+            echo "<td>" . $person[0] . "</td>";
+            echo "<td>" . $person[1] . "</td>";
+            
+            echo "<td>";
+              foreach($person[2]  as $place) {
+                    echo $place . "<br>";
+              }
+            echo "</td>";
+            echo "<td>";
+                foreach ($person[3] as $phone) {
+                    echo $phone . "<br>";
                 }
-            }
-            ?>
-        </tr>
-        <tr>
-            <?php
-            foreach ($people as $person) {
-                foreach ($person as $key => $value) {
-                    if ($key == 1)
-                        echo "<td>" . $value . "</td>";
-                }
-            }
-            ?>
-        </tr>
-        <tr>
-            <?php
-            foreach ($people as $person) {
-                foreach($person as $key => $value) {
-                    if ($key==2)
-                    echo "<td>" . $value . "</td>";
-                }
-            }
-            ?>
-        </tr>
-        <tr>
-            <?php
-            foreach($people as $person) {
-                foreach($person as $key=>$value) {
-                    if ($key == 3)
-                    echo "<td>" . $value . "</td>";
-                }
-            }
-            ?>
-        </tr>
+            echo "</td>";
+            // echo "<td>" . $person[3] . "</td>";
+            echo "</tr>";
+            
+        }
+        ?>
     </table>
 
 
