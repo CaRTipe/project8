@@ -12,27 +12,56 @@
     />
   </head>
   <body>
-    <div id="demo">
-      <h1>AJAX Tutorial</h1>
-      <p>
-        AJAX (Asynchronous JavaScript and XML) is a technique used in web <br>
-        development to create asynchronous web applications. It allows web pages <br>
-        to be updated asynchronously by exchanging small amounts of data with <br>
-        the server behind the scenes, without requiring a full page reload. This <br>
-        results in a more dynamic and responsive user experience. <br>
-      </p>
-      <button type="button" onclick="loadDoc()" class="btn btn-primary">Change Content</button>
-    </div>
+    <table class="table" id="demo"></table>
 
     <script>
+      //   function loadDoc() {
+      //     const xhttp = new XMLHttpRequest();
+      //     xhttp.onload = function () {
+      //       myFunction(this);
+      //     };
+      //     xhttp.open("GET", "cd-catalog.xml");
+      //     xhttp.send();
+
+      //     function myFunction(xml) {
+      //       const xmlDoc = xml.responseXML;
+      //       const x = xmlDoc.getElementsByTagName("CD");
+      //       let table = "<tr><th>Artist</th><th>Title</th></tr>";
+      //       for (let i = 0; i < x.length; i++) {
+      //         table +=
+      //           "<tr><td>" +
+      //           x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+      //           "</td><td>" +
+      //           x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+      //           "</td></tr>";
+      //       }
+      //       document.getElementById("demo").innerHTML = table;
+      //     }
+      //   }
       function loadDoc() {
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function () {
-          document.getElementById("demo").innerHTML = this.responseText;
+          myFunction(this);
         };
-        xhttp.open("GET", "txt.txt");
+        xhttp.open("GET", "cd_catalog.xml");
         xhttp.send();
       }
+      function myFunction(xml) {
+        const xmlDoc = xml.responseXML;
+        const x = xmlDoc.getElementsByTagName("CD");
+        let table = "<tr><th>Artist</th><th>Title</th></tr>";
+        for (let i = 0; i < x.length; i++) {
+          table +=
+            "<tr><td>" +
+            x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+            "</td></tr>";
+        }
+        document.getElementById("demo").innerHTML = table;
+      }
+
+      loadDoc()
     </script>
   </body>
 </html>
